@@ -1,0 +1,13 @@
+/* 用户定义基本变量值 */
+/* 基本颜色值定义 */
+/**
+ * 区域分割属性定义
+ */
+/**
+ * 定义flex相关布局的兼容性代码
+ */
+body {
+    text-rendering: optimizeLegibility;
+    font-family: "PingHei", "Helvetica Neue", Helvetica, 'Myriad Set Pro', "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif, STHeitiSC-Light, "STHeiti" ! important;
+    overflow-y: hidden;
+}

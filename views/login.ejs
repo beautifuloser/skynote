@@ -1,0 +1,51 @@
+<%include header.ejs%>
+
+<div class="login-mainpage">
+
+    <div class="login-mainpage-subblock">
+        <div class="login-mainpage-subblock-main">
+            <div class="alert alert-danger invisible" role="alert" id="messagePanel"></div>
+            <div class="t-login-block form-group form-group-lg">
+                <div class="t-login-block-main">
+
+                    <h1 class="t-login-block-title text-center">SkyNote</h1>
+                    <!--<h2 class="t-login-block-subtitle text-center">为互联网团队而生</h2>-->
+                    <div class="t-login-block-main-block" style="">
+                        <label class="t-login-block-input-label">邮箱</label>
+                        <input class="form-control" type="text" name="username" value="" id="username"  onchange="trimInputString(this)">
+                        <label class="t-login-block-input-label">密码</label>
+                        <input class="form-control" type="password" name="password" value="" id="password" maxlength="20" placeholder="密码" onchange="trimInputString(this)">
+                        <br>
+                        <a class="form-control btn btn-primary t-login-block-submit-button" onclick="login();">登 录</a>
+                        <div class="t-login-block-option">
+                        <span class="pull-left Remember_me navi-label-normal" onclick="rememberMe()">
+                                <input type="checkbox"> 保持登录状态
+                        </span>
+                            <!--<a class="label-clickable" onclick="javascript:window.location.href=glob_basePath + 'page/forgotpassword_init.jsp'">忘记密码了？</a>-->
+                        </div>
+                        <label class="" style="margin-top: 50px; align-self: flex-end;">我还没有SkyNote的账号，想<a href="/register"> 注册 </a>一个</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function login(){
+        var data = {
+            username :$('#username').val(),
+            password:$('#password').val()
+        }
+        $.post('/login',data,null,'json')
+                .done(function(data){
+                    if(data.success){
+                        self.location = '/';
+                    }else {
+
+                    }
+                })
+        // self.location='/'
+    }
+</script>
+
+<%include footer.ejs%>

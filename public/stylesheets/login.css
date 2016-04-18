@@ -1,0 +1,184 @@
+/* 用户定义基本变量值 */
+/* 基本颜色值定义 */
+/**
+ * 区域分割属性定义
+ */
+/**
+ * 定义flex相关布局的兼容性代码
+ */
+.login-mainpage {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: #f5f5f6;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.login-mainpage-block {
+    flex-grow: 1;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+.login-mainpage-block .login-mainpage-subblock {
+    flex-grow: 1;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    max-width: 1150px;
+    min-width: 600px;
+    min-height: 350px;
+    max-height: 700px;
+}
+.login-mainpage-block .login-mainpage-subblock .login-mainpage-subblock-main {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    padding: 0px 60px;
+    width: 100%;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block label {
+    margin-bottom: 0px;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block input {
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    width: 100%;
+    height: 45px;
+    font-size: 13px;
+    border-radius: 0px;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-main {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-main .t-login-block-main-block {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-title {
+    font-size: 28px;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-title.center {
+    text-align: center;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-subtitle {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #aaaaaa;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-input {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-input input {
+    margin: 0px;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-input a {
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 110px;
+    height: 45px;
+    line-height: 31px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-input-label {
+    align-self: flex-start;
+    font-size: 16px;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-submit-button {
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: #0099FF;
+}
+.login-mainpage-block .login-mainpage-subblock .t-login-block .t-login-block-option {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+.t-pagefoot {
+    font-weight: normal;
+    color: #aaaaaa;
+}
+.first-join-team-list {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 350px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.first-join-team-list .first-join-team-list-item {
+    flex-shrink: 0;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0px;
+    width: 100%;
+    border-bottom: 1px solid #e4e4e4;
+}
+.first-join-team-list .first-join-team-list-item .first-join-team-list-item-title {
+    font-size: 24px;
+}
+.first-join-team-list .first-join-team-list-item .first-join-team-list-item-body {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.first-join-team-list .first-join-team-list-item .first-join-team-list-item-body .first-join-team-list-item-user-btn {
+    padding: 5px 30px;
+    width: 105px;
+    text-align: center;
+    color: #00bb9c;
+    text-decoration: none;
+    border: 1px solid #00bb9c;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.first-join-team-list .first-join-team-list-item .first-join-team-list-item-body .first-join-team-list-item-user-btn:hover {
+    color: #fff;
+    background-color: #00bb9c;
+}
+.first-join-team-list .first-join-team-list-item .first-join-team-list-item-body .first-join-team-list-item-user-btn.checked {
+    color: #fff;
+    background-color: #00bb9c;
+}

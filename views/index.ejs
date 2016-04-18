@@ -1,0 +1,9 @@
+<%include header.ejs%>
+    <!--<h1><%= title %></h1>-->
+    <!--<p>Welcome to <%= title %></p>-->
+<% if (!user){%>
+    <%include nologin_main.ejs%>
+<%}else{%>
+    <%include logined_main.ejs%>
+<%}%>
+<%include footer.ejs%>

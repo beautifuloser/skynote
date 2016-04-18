@@ -1,0 +1,56 @@
+<%include header.ejs%>
+
+<div class="login-mainpage">
+
+    <div class="login-mainpage-subblock">
+        <div class="login-mainpage-subblock-main">
+            <div class="alert alert-danger invisible" role="alert" id="messagePanel"></div>
+            <div class="t-login-block form-group form-group-lg">
+                <div class="t-login-block-main">
+
+                    <h1 class="t-login-block-title text-center">SkyNote</h1>
+                    <!--<h2 class="t-login-block-subtitle text-center">为互联网团队而生</h2>-->
+                    <div class="" style="">
+                        <label class="">账号</label>
+                        <input class="form-control" type="text" name="username" value="" id="username" placeholder="账号" onchange="trimInputString(this)">
+
+                        <label class="">密码</label>
+                        <input class="form-control" type="password" name="password" value="" id="password" maxlength="20" placeholder="密码" onchange="trimInputString(this)">
+                        <label class="">确认密码</label>
+                        <input class="form-control" type="password" name="passwordRepeat" value="" id="passwordRepeat" maxlength="20" placeholder="确认密码" onchange="trimInputString(this)">
+                        <br>
+                        <a class="form-control btn btn-primary t-login-block-submit-button" onclick="login();">注 册</a>
+                        <div class="t-login-block-option">
+                        <!--<span class="pull-left Remember_me navi-label-normal" onclick="rememberMe()">-->
+                          <!--<input type="checkbox">       保持登录状态-->
+                        <!--</span>-->
+                            <!--<a class="label-clickable" onclick="javascript:window.location.href=glob_basePath + 'page/forgotpassword_init.jsp'">忘记密码了？</a>-->
+                        </div>
+                        <!--<label class="" style="margin-top: 50px; align-self: flex-end;">我还没有Teamin的账号，想<a href="javascript:window.location.href = glob_basePath + 'page/newregister.jsp?code=' + code"> 注册 </a>一个</label>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function login(){
+        var data = {
+            username : $('#username').val(),
+            password : $('#password').val(),
+            passwordRepeat : $('#passwordRepeat').val()
+        }
+        $.post('/register',data,null,'json')
+                .done(function (data) {
+                    console.log(data);
+                    if(data.success){
+//                        alert('regist success');
+                        self.location = '/';
+                    }else {
+                        //处理错误
+                    }
+                });
+    }
+</script>
+
+<%include footer.ejs%>

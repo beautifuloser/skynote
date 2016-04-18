@@ -1,0 +1,25 @@
+<main id="content" class="content" role="main">
+    <% notes.forEach(function(note){%>
+    <article class="post">
+        <header class="post-header">
+            <h2 class="post-title"><a href="/detail/<%=note._id%>"><%=note.title%></a></h2>
+        </header>
+        <td><%note.tag%></td>
+        <section class="post-excerpt">
+            <!--<p>好基友现在也是个前端，昨天他问我说：   公司的大部分任务都能应付着做了，      现在要做个分页，如果用插件的话，很快就能上，      但是我想提升一下自己，怎么从头开始写一个呢，实在是一点思路也没有。 我想，很多自学前端的同学都会遇到这样一个坎儿，我能做很多东西，但是感觉自己还是啥都不会。 编程，很重要的一个技能就是抽象能力，就是现实中的琐事儿，我怎么用代码来表示。（是表示哈，不是人工智能） 我特别崇拜 ACM 的获奖者，我们公司的死月大大就曾经是 ACM 全国一等奖哦，快过来膜拜。 <a class="read-more" href="/blog/ru-he-xie-ge-jian-dan-de-fen-ye/">»</a></p>-->
+            <td><%=note.content%></td>
+        </section>
+        <footer class="post-meta">
+            <!--<img class="author-thumb" src="/blog/content/images/2015/07/mini.jpg" alt="Bolt Wang 春岩" nopin="nopin">-->
+            <!--<a href="/blog/author/bolt/">Bolt Wang 春岩</a>-->
+
+            <time class="post-date" datetime="2016-03-21"><%=note.createTime%></time>
+            <!--<span style="margin-left:20px;">访问数：2922</span>-->
+        </footer>
+    </article>
+<%})%>
+    <!--<nav class="pagination" role="navigation">-->
+    <!--<span class="page-number">Page 1 of 3</span>-->
+    <!--<a class="older-posts" href="/blog/page/2/">Older Posts →</a>-->
+    <!--</nav>-->
+</main>
